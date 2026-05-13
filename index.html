@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Tênis</title>
+    <title>TeeStyle | Loja de Camisetas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Loja de Tênis</h1>
-        <div id="carrinho">
-            Carrinho: <span id="total-itens">0</span> itens
-        </div>
+        <h1>TeeStyle</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Carrinho (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section class="produtos">
-            <div class="produto">
-                <img src="https://via.placeholder.com/150" alt="Tênis 1">
-                <h2>Tênis Esportivo</h2>
-                <p>R$ 250,00</p>
-                <button onclick="adicionarAoCarrinho('Tênis Esportivo', 250)">Adicionar ao Carrinho</button>
+    <main class="container">
+        <h2>Nossas Estampas</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Camiseta Minimalista">
+                <h3>Camiseta Minimal</h3>
+                <p>R$ 59,90</p>
+                <button class="add-btn" data-product="Camiseta Minimal">Comprar</button>
             </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/150" alt="Tênis 2">
-                <h2>Tênis Casual</h2>
-                <p>R$ 180,00</p>
-                <button onclick="adicionarAoCarrinho('Tênis Casual', 180)">Adicionar ao Carrinho</button>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Camiseta Retro">
+                <h3>Camiseta Retro</h3>
+                <p>R$ 74,90</p>
+                <button class="add-btn" data-product="Camiseta Retro">Comprar</button>
             </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/150" alt="Tênis 3">
-                <h2>Tênis Fashion</h2>
-                <p>R$ 300,00</p>
-                <button onclick="adicionarAoCarrinho('Tênis Fashion', 300)">Adicionar ao Carrinho</button>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Camiseta Urban">
+                <h3>Camiseta Urban</h3>
+                <p>R$ 89,90</p>
+                <button class="add-btn" data-product="Camiseta Urban">Comprar</button>
             </div>
-        </section>
+        </div>
     </main>
-
-    <footer>
-        <p>© 2026 Loja de Tênis. Todos os direitos reservados.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
-</html>.
+</html>
