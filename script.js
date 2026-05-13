@@ -1,7 +1,20 @@
-let totalItens = 0;
+// Selecionando os elementos
+const buttons = document.querySelectorAll('.add-btn');
+const cartCountElement = document.getElementById('cart-count');
 
-function adicionarAoCarrinho(nome, preco) {
-    totalItens++;
-    document.getElementById('total-itens').textContent = totalItens;
-    alert(`${nome} adicionado ao carrinho por R$ ${preco.toFixed(2)}!`);
-}
+let cartItems = 0;
+
+// Função para adicionar ao carrinho
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productName = button.getAttribute('data-product');
+        
+        // Aumenta o contador
+        cartItems++;
+        cartCountElement.innerText = cartItems;
+        
+        // Feedback visual
+        alert(`${productName} adicionado ao carrinho!`);
+        console.log(`Carrinho atual: ${cartItems} itens`);
+    });
+});
